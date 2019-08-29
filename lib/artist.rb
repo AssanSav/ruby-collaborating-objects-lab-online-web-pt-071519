@@ -21,16 +21,12 @@ class Artist
     song.artist = self
   end
   
-  def self.find_by_name(name)
-    Artist.all.find {|artist| artist.name == name}
-    binding.pry
-  end
   
-  # def self.find_or_create_by_name(name)
-  #   artist = @@all.detect {|artist| artist.name == name}
-  #     artist ? artist : Artist.new(name)
-  #   #binding.pry
-  # end
+  def self.find_or_create_by_name(name)
+    artist = @@all.detect {|artist| artist.name == name}
+      artist ? artist : Artist.new(name)
+    #binding.pry
+  end
   
   def print_songs 
     songs.each {|song| puts song.name}
