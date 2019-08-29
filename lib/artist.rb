@@ -22,7 +22,7 @@ class Artist
   end
   
   def self.find_by_name(name)
-    Artist.all.find {|artist| artist.name == name}
+    @@all.find {|artist| artist.name == name}
     binding.pry
   end
   
